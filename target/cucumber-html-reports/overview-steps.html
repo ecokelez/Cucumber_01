@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>14 Dec 2022, 16:53</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciAmazonSayfasinaGider()</td>
+              <td>13</td>
+              <td class="duration" data-value="1754554884">1.754</td>
+              <td class="duration" data-value="1754554884">22.686</td>
+              <td class="duration" data-value="22809213500">22.809</td>
+              <td class="failed">7.69%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciIcinAramaYapar(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="286014">0.000</td>
+              <td class="duration" data-value="286014">0.001</td>
+              <td class="duration" data-value="2002100">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciIphoneIcinAramaYapar()</td>
+              <td>2</td>
+              <td class="duration" data-value="500200">0.000</td>
+              <td class="duration" data-value="500200">0.001</td>
+              <td class="duration" data-value="1000400">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciNutellaAratir()</td>
+              <td>2</td>
+              <td class="duration" data-value="25016500">0.025</td>
+              <td class="duration" data-value="25016500">0.050</td>
+              <td class="duration" data-value="50033000">0.050</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciSaniyeBekler(int)</td>
+              <td>50</td>
+              <td class="duration" data-value="100064">0.000</td>
+              <td class="duration" data-value="100064">0.001</td>
+              <td class="duration" data-value="5003200">0.005</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciSayfasinaGider(java.lang.String)</td>
+              <td>8</td>
+              <td class="duration" data-value="13884550">0.013</td>
+              <td class="duration" data-value="13884550">0.026</td>
+              <td class="duration" data-value="111076400">0.111</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.kullaniciSeleniumIcinAramaYapar()</td>
+              <td>2</td>
+              <td class="duration" data-value="500450">0.000</td>
+              <td class="duration" data-value="500450">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.sayfayiKapatir()</td>
+              <td>21</td>
+              <td class="duration" data-value="382016785">0.382</td>
+              <td class="duration" data-value="382016785">8.022</td>
+              <td class="duration" data-value="8022352500">8.022</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.sonuclarinIcerdiginiTestEder(java.lang.String)</td>
+              <td>7</td>
+              <td class="duration" data-value="428900">0.000</td>
+              <td class="duration" data-value="428900">0.001</td>
+              <td class="duration" data-value="3002300">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.sonuclarinIphoneIcerdiginiTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.sonuclarinNutellaIcerdiginiTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.002</td>
+              <td class="duration" data-value="2001800">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.sonuclarinSeleniumIcerdiginiTestEder()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.AmazonStepDefinition.urlInIcerdiginiTestEdin(java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="100090">0.000</td>
+              <td class="duration" data-value="100090">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciAnasayfasinaGider(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="10006500">0.010</td>
+              <td class="duration" data-value="10006500">0.018</td>
+              <td class="duration" data-value="50032500">0.050</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciLoginButonunaBasar()</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciLoginYazisinaTiklar()</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciPasswordGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciSaniyeBekler(int)</td>
+              <td>5</td>
+              <td class="duration" data-value="200260">0.000</td>
+              <td class="duration" data-value="200260">0.001</td>
+              <td class="duration" data-value="1001300">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciSayfayaGirisYapilamadiginiKontrolEder()</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciSayfayiKapatir()</td>
+              <td>5</td>
+              <td class="duration" data-value="200180">0.000</td>
+              <td class="duration" data-value="200180">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BRCStepDefinition.kullaniciUsernameGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="200080">0.000</td>
+              <td class="duration" data-value="200080">0.001</td>
+              <td class="duration" data-value="1000400">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.gecersizPasswordGirer()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.gecersizUsernameGirer()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="duration" data-value="1000900">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.kulaniciAnaSayfasinaGider(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10007000">0.010</td>
+              <td class="duration" data-value="10007000">0.010</td>
+              <td class="duration" data-value="10007000">0.010</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.kullaniciSayfayiKapatir()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.loginButonunaBasar()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000500">0.001</td>
+              <td class="duration" data-value="1000500">0.001</td>
+              <td class="duration" data-value="1000500">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.loginYazisinaTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.BlueRentACarStepDefinition.sayfayaGirisYapilamadiginiKontrolEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DemoStepDefinition.alertseTiklayin()</td>
+              <td>2</td>
+              <td class="duration" data-value="2055871750">2.055</td>
+              <td class="duration" data-value="2055871750">4.111</td>
+              <td class="duration" data-value="4111743500">4.111</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DemoStepDefinition.allertInGorunurOlmasiniBekleyin()</td>
+              <td>2</td>
+              <td class="duration" data-value="1500650">0.001</td>
+              <td class="duration" data-value="1500650">0.003</td>
+              <td class="duration" data-value="3001300">0.003</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DemoStepDefinition.allertUzerindekiYazininThisAlertAppearedAfterBesSecondsOldugunuTestEdin()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DemoStepDefinition.okDiyerekAlertiKapatin()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DemoStepDefinition.onButtonClickAlertWillAppearAfterBesSecondsKarsisindakiClickMeButonunaBasin()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">50.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.createTusunaBasar()</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.extensionBolumuneGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.kullaniciAdresineGider(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="10407180">0.010</td>
+              <td class="duration" data-value="10407180">0.015</td>
+              <td class="duration" data-value="52035900">0.052</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.kullaniciIleAramaYapar(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.newButonunaBasar()</td>
+              <td>5</td>
+              <td class="duration" data-value="199940">0.000</td>
+              <td class="duration" data-value="199940">0.000</td>
+              <td class="duration" data-value="999700">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.ofisBolumuneGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="400440">0.000</td>
+              <td class="duration" data-value="400440">0.001</td>
+              <td class="duration" data-value="2002200">0.002</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.positionBolumuneGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="200160">0.000</td>
+              <td class="duration" data-value="200160">0.001</td>
+              <td class="duration" data-value="1000800">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.salaryGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.soyisimBolumuneGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.startdateGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.&#305;simBolumundeOldugunuDogrular(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EDTStepDefinition.&#305;simBolumuneGirer(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="200080">0.000</td>
+              <td class="duration" data-value="200080">0.001</td>
+              <td class="duration" data-value="1000400">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GuruStepDefinition.kullaniciAnaSayfasinda(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="13342516">0.013</td>
+              <td class="duration" data-value="13342516">0.036</td>
+              <td class="duration" data-value="80055100">0.080</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.GuruStepDefinition.kullaniciSutunundakiTumDegerleriYazdirir(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HepsiBuradaStepDefinition.kullaniciSayfasinaGirer(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="1501050">0.001</td>
+              <td class="duration" data-value="1501050">0.002</td>
+              <td class="duration" data-value="3002100">0.003</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.addElementButonunaBasin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.addremoveElementsYazisininGorunurlugunuTestEdin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.deleteButonuGorunurOluncayaKadarBekleyin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.deleteButonunaBasarakButonuSilin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.deleteButonununGorunmediginiTestEdin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.deleteButonununGorunurOldugunuTestEdin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.kullaniciOlarakAdresineGidin(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="17602076033">17.602</td>
+              <td class="duration" data-value="17602076033">52.793</td>
+              <td class="duration" data-value="52806228100">52.806</td>
+              <td class="failed">33.33%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.HerOkuStepDefinition.sayfayiKapatin()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)</td>
+              <td>45</td>
+              <td class="duration" data-value="130309060">0.130</td>
+              <td class="duration" data-value="130309060">5.557</td>
+              <td class="duration" data-value="5863907700">5.863</td>
+              <td class="failed">2.22%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciAdresineGider(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="7006100">0.007</td>
+              <td class="duration" data-value="7006100">0.007</td>
+              <td class="duration" data-value="7006100">0.007</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciDigerWindowaGecer()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciIlkSayfayaDonuldugunuTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciIlkSayfayaGeriDoner()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciKutularinaBilgileriGirer(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciKutusunaBilgileriGirer(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="999200">0.000</td>
+              <td class="duration" data-value="999200">0.000</td>
+              <td class="duration" data-value="999200">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciLoginButonunaBasar()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciLoginPortalaKadarAsagiIner()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciLoginPortalaTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciOkDiyerekPopupiKapatir()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.WebDUStepDefinition.kullaniciPopupTaCikanYazininValidationFailedOldugunuTestEder()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>68</td>
+            <td>325</td>
+            <td class="duration">0.289</td>
+            <td class="duration">52.806</td>
+            <td class="duration">1:34.005</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

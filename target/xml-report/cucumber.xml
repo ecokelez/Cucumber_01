@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.246">
+    <testcase classname="US015 ClassWork Calismasi" name="TC01 Alerts and Explicitly Wait" time="25.897">
+        <failure message="element click intercepted: Element &lt;span class=&quot;text&quot;&gt;...&lt;/span&gt; is not clickable at point (104, 606). Other element would receive the click: &lt;div id=&quot;fixedban&quot; style=&quot;width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=108.0.5359.99)&#10;Build info: version: '4.1.2', revision: '9a5a329c5a'&#10;System info: host: 'ERSOY', ip: '192.168.1.4', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [525efcd11177271e687972ffd243ba91, clickElement {id=dfa03f28-b775-4e97-b00d-71249251a58e}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\win8\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55451}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55451/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (525efcd11177271e687972ffd243ba91)] -&gt; xpath: //*[text()='Alerts'][1]]&#10;Session ID: 525efcd11177271e687972ffd243ba91" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given Kullanici olarak "demoUrl" adresine gidin.............................passed
+Then Alertse tiklayin.......................................................failed
+And On button click, alert will appear after bes seconds karsisindaki click me butonuna basin.skipped
+And Allert’in gorunur olmasini bekleyin.....................................skipped
+And Allert uzerindeki yazinin This alert appeared after bes seconds oldugunu test edin.skipped
+And Ok diyerek alerti kapatin...............................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="text">...</span> is not clickable at point (104, 606). Other element would receive the click: <div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999">...</div>
+  (Session info: chrome=108.0.5359.99)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ERSOY', ip: '192.168.1.4', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [525efcd11177271e687972ffd243ba91, clickElement {id=dfa03f28-b775-4e97-b00d-71249251a58e}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.99, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\win8\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55451}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55451/devtoo..., se:cdpVersion: 108.0.5359.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (525efcd11177271e687972ffd243ba91)] -> xpath: //*[text()='Alerts'][1]]
+Session ID: 525efcd11177271e687972ffd243ba91
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
+	at stepDefinitions.DemoStepDefinition.alertseTiklayin(DemoStepDefinition.java:18)
+	at ✽.Alertse tiklayin(file:///C:/SeleniumBatch81/com.Batch81Cucumber_01/src/test/resources/features/US015_ClassWork.feature:11)
+]]></failure>
+    </testcase>
+</testsuite>

@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
  @RunWith(Cucumber.class)
  @CucumberOptions(
-         plugin={"html:target/cucumber-reports.html",
+         plugin={"html:target\\cucumber-reports.html",
                  "json:target/json-reports/cucumber.json",
                  "junit:target/xml-report/cucumber.xml"},
          //=> Sadece Runnner Class'ından calistirdigimizda bu raporu alabilriz ve
@@ -30,7 +30,7 @@ public class Runner {
     1) Birincisi => @RunWith(Cucumber.class) notasyonu : Runner class'ina calisma
     ozelligi ekler. Bu notasyon oldugu icin cucumber frameworkumuzde JUnit kullanmayi
      tercih ederiz.
-    2) İkincisi => @CucumberOptions notasyonu icinde features : Runner dosyasinin feature dosyasini
+    2) İkincisi => @CucumberOptions notasyonu : Runner dosyasinin feature dosyasini
     nereden bulacagini tarif eder.
     glue : stepDefinitions yolunu belirtiriz.
     tags : Hangi tag'i calistirmak istiyorsak onu belli eder.
